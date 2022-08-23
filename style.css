@@ -1,0 +1,155 @@
+body{
+    background: #2E2E44;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@font-face {
+    font-family: technology;
+    src: url(Technology-Bold.ttf);
+}
+
+h1{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+    font-size: 65px;
+    letter-spacing: 3px;
+}
+
+div{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#date{
+    color: white;
+}
+
+.box{
+    margin-top: 50px;
+    background-color: #2D2F41;
+    position: relative;
+    width: 55%;
+    height: 250px;
+}
+
+.box:before,.box:after{
+    content: '';
+    position:absolute;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-size: 400%; 
+    left: -2px;
+    top:-2px;
+    bottom: 0;
+    z-index: -1;    
+    animation: animate 50s linear infinite;
+}
+
+.box:after{
+    filter: blur(20px);
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+#buttons{
+    margin-top: 50px;
+}
+
+a{
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 2px solid #89FE0D;
+    border-radius: 50px;
+    color: #89FE0D;
+    letter-spacing: 3px;
+    font-size: 32px;
+    transition: 0.2s;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+a:hover{
+
+    color: #2E2E44;
+    background: #89FE0D;
+    box-shadow: 0 0 10px #89FE0D, 0 0 10px  #89FE0D, 0 0 10px #89FE0D;
+}
+
+#clock{
+    font-size: 120px;
+    font-weight: 900;
+}
+
+#hour{
+    background: linear-gradient(#5DB5FD, #4252cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#colon{
+    font-weight:400;
+    color: rgb(172, 170, 170);
+}
+
+#minutes{
+    background: linear-gradient(#FDA369,#FE768C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#date{
+    font-size: 30px;
+    font-weight: bold;
+    color: #9c2cc2;
+    position: relative;
+    letter-spacing: 1px;
+
+}
+
+#time{
+    display:flex;
+    flex-direction: row;
+    font-family: technology;
+}
+#clock{
+    flex-grow: 2;
+    margin-right:-120px;
+    padding: 0px;
+    margin-top: 18px;
+
+}
+
+#secampm{
+    width: 60px;
+    flex-shrink: 1;
+    margin-right: 50px;
+    /* margin-top: 4px; */
+}
+
+#seconds{
+    /* margin-top: 40px; */
+    font-size: 32px;
+    font-weight: bold;
+    color: #2e8a8d;
+}
+
+#ampm{
+    font-size: 32px;
+    font-weight: bold;
+    color: #ec9615;
+}
